@@ -55,7 +55,7 @@ const page = () => {
 
     }
 Name : ${formData.firstName} ${formData.lastName}
-Subjects in 12th : ${formData.subjectIn12}
+Subjects in current grade : ${formData.subjectIn12}
 Skills : ${formData.Skills}
 Interest : ${formData.Interest}
 Personality Traits : ${formData.Personality}

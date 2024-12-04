@@ -2,9 +2,11 @@
 import Link from 'next/link';
 import React from 'react'
 import { useState } from 'react';
+import { Loader } from 'lucide-react';
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const page = () => {
+    const [loader,setLoader]=useState(false)
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -27,6 +29,7 @@ const page = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoader(true)
 
     const genAI = new GoogleGenerativeAI("AIzaSyAQ0GK-17iWUa4f6-rjjuSZkfGi7jmk214");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -40,11 +43,12 @@ const page = () => {
     {
     "greeting":"Hi........"
     "analysis":"..........."
-    "degrees":"list all the possible degrees that he can opt"
+    
     .
     .
     .
     .}
+    also include the possible list of degrees (name:degrees) in an array inside careerSuggestions
 
 
 
@@ -63,6 +67,7 @@ Personality Traits : ${formData.Personality}
     const guide = JSON.parse(jsonString);
     setResponseText(guide); // Set the response as JSON string
     console.log(guide)
+    setLoader(false)
 
     setModalVisible(true); // Show the modal after receiving the response
   };
@@ -266,9 +271,13 @@ Personality Traits : ${formData.Personality}
               <div>
                 <button 
                   type="submit" 
-                  className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold text-lg"
+                  disabled={loader}
+                  className="w-full flex items-center justify-center bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold text-lg"
                 >
-                  Get Career Suggestions
+                    <div className='flex '>
+                        {!loader? <p className='mr-2'> Get Career Suggestions</p> : <Loader className="animate-spin" />}
+                   
+                   </div>
                 </button>
               </div>
             </form>

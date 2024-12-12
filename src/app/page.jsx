@@ -111,12 +111,13 @@ Personality Traits : ${formData.Personality}
                   <input 
                     type="text" 
                     id="firstName"
+                    
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
                     required
                     placeholder='e.g. john'
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 text-blue-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 <div>
@@ -131,7 +132,7 @@ Personality Traits : ${formData.Personality}
                     onChange={handleChange}
                      placeholder='e.g. doe'
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 text-blue-700  border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
@@ -148,7 +149,7 @@ Personality Traits : ${formData.Personality}
                   onChange={handleChange}
                   placeholder="e.g. technology, design, writing"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border text-blue-700  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -164,7 +165,7 @@ Personality Traits : ${formData.Personality}
                   onChange={handleChange}
                   placeholder="e.g. programming, communication, problem-solving"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 text-blue-700  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -180,7 +181,7 @@ Personality Traits : ${formData.Personality}
                   onChange={handleChange}
                   placeholder="e.g. Science, Commerce, Arts"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 text-blue-700  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -196,7 +197,7 @@ Personality Traits : ${formData.Personality}
                   onChange={handleChange}
                   placeholder="e.g. creative, analytical, leadership"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 text-blue-700  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 

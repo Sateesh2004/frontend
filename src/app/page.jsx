@@ -31,7 +31,9 @@ const page = () => {
     e.preventDefault();
     setLoader(true)
 
-    const genAI = new GoogleGenerativeAI("AIzaSyAQ0GK-17iWUa4f6-rjjuSZkfGi7jmk214");
+    
+
+    const genAI = new GoogleGenerativeAI("AIzaSyDBRs0M_amQlK7EvtU-4F8w96V4KYYwnY4");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const prompt = `These are the details of the user based on these details suggest him some career guidance what career options he can choose. And assume you are directly telling to user so response in that way and in JSON format.
